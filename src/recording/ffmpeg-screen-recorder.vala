@@ -50,8 +50,12 @@ namespace Peek.Recording {
 
         args.append_val (filter);
 
-        args.append_val ("-vaapi_device /dev/dri/renderD128");
-        args.append_val ("-c:v h264_vaapi -vf 'hwupload,scale_vaapi=format=nv12'");
+        args.append_val ("-vaapi_device");
+        args.append_val ("/dev/dri/renderD128");
+        args.append_val ("-c:v");
+        args.append_val ("h264_vaapi");
+        args.append_val ("-vf");
+        args.append_val ("'hwupload,scale_vaapi=format=nv12'");
 
         string extension;
         Ffmpeg.add_output_parameters (args, config, out extension);

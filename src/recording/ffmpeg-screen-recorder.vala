@@ -42,13 +42,14 @@ namespace Peek.Recording {
         args.append_val ("-i");
         args.append_val (display + "+" + area.left.to_string () + "," + area.top.to_string ());
 
-        args.append_val ("-filter:v");
+        /*args.append_val ("-filter:v");
         var filter = "scale=iw/" + config.downsample.to_string () + ":-1";
         if (config.output_format == OutputFormat.MP4) {
           filter += ", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)";
         }
 
         args.append_val (filter);
+        */
 
         args.append_val ("-vaapi_device");
         args.append_val ("/dev/dri/renderD128");
